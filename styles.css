@@ -116,7 +116,17 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 767px) {
   .header-inner { height: 58px; padding: 0; }
   .brand { order: 2; gap: 0; }
-  .header-menu { order: 1; width: 38px; height: 38px; border-radius: 10px; }
+  .header-menu {
+    order: 1;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 6px;
+    padding: 0;
+  }
+  .header-menu span {
+    width: 14px !important;
+    height: 9px !important;
+  }
   .brand-tagline { display: none; }
   .brand-logo { width: 92px; height: 50px; }
 }
@@ -1725,6 +1735,18 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.4fr repeat(3, 1fr); } }
 .footer-logo { width: 260px; max-width: 100%; margin-bottom: 20px; }
+@media (max-width: 767px) {
+  .footer-logo {
+    width: 130px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-inline-start: 0;
+    margin-inline-end: auto;
+    display: block;
+  }
+  .footer-brand .footer-tagline,
+  .footer-brand .footer-social { text-align: start; }
+}
 .footer-tagline { font-size: 14px; line-height: 1.6; color: rgba(255, 255, 255, 0.75); }
 
 .footer-social {
