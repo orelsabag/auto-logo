@@ -1611,6 +1611,30 @@ a { color: inherit; text-decoration: none; }
   color: rgba(255, 255, 255, 0.92);
 }
 
+.lead-closing {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 213, 0, 0.25);
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+}
+.lead-closing a {
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 213, 0, 0.5);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  transition: text-decoration-color 0.2s;
+}
+.lead-closing a:hover {
+  text-decoration-color: var(--gold);
+}
+
 .lead-form {
   background: var(--white);
   color: var(--ink);
