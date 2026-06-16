@@ -882,6 +882,18 @@ a { color: inherit; text-decoration: none; }
 }
 .check-card-final .check-text strong { color: var(--royal-deep); }
 
+/* Mobile only — center everything inside each check card */
+@media (max-width: 639px) {
+  .check-card {
+    text-align: center;
+    padding-top: 56px;
+  }
+  .check-card .check-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* ============================================================
    PRICING
    ============================================================ */
