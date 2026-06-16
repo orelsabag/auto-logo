@@ -90,20 +90,21 @@ a { color: inherit; text-decoration: none; }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
   gap: 16px;
-  height: 70px;
+  height: 86px;
 }
 .brand {
-  display: inline-flex; align-items: center; gap: 12px;
+  display: inline-flex; align-items: center; gap: 14px;
   flex-shrink: 0;
 }
-.brand-logo { width: 64px; height: 48px; object-fit: contain; }
-.brand-word { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-logo { width: 116px; height: 70px; object-fit: contain; }
+.brand-word { display: none; flex-direction: column; line-height: 1.15; }
+@media (min-width: 1024px) { .brand-word { display: flex; } }
 .brand-name {
   font-family: 'Heebo', sans-serif; font-weight: 900;
-  font-size: 17px; color: var(--royal-deep);
+  font-size: 19px; color: var(--royal-deep);
 }
 .brand-tagline {
-  font-size: 11px; color: var(--ink-soft);
+  font-size: 12px; color: var(--ink-soft);
   letter-spacing: 0.02em; font-weight: 500;
 }
 
@@ -122,26 +123,73 @@ a { color: inherit; text-decoration: none; }
 .nav-link:hover { color: var(--royal); }
 .nav-link:hover::after { transform: scaleX(1); }
 
-.header-cta {
+/* ============================================================
+   HEADER CTA GROUP — 3 icons (Phone | WhatsApp | Waze)
+   ============================================================ */
+.header-cta-group {
   display: none;
-  align-items: center; gap: 10px;
-  padding: 10px 18px;
-  background: var(--royal);
-  color: var(--white);
-  border-radius: 100px;
-  transition: all 0.25s;
+  align-items: center;
+  gap: 10px;
 }
-@media (min-width: 768px) { .header-cta { display: inline-flex; } }
-.header-cta:hover { background: var(--royal-deep); transform: translateY(-1px); box-shadow: 0 8px 20px -6px rgba(27, 69, 168, 0.45); }
-.header-cta-icon {
+@media (min-width: 768px) { .header-cta-group { display: flex; } }
+
+.hcta {
+  position: relative;
   display: grid; place-items: center;
-  width: 28px; height: 28px;
-  background: var(--gold); color: var(--royal-deep);
+  width: 50px; height: 50px;
   border-radius: 50%;
+  color: var(--white);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.header-cta-body { display: flex; flex-direction: column; line-height: 1.15; }
-.header-cta-label { font-size: 11px; opacity: 0.85; font-weight: 500; }
-.header-cta-num { font-weight: 800; font-size: 15px; }
+.hcta:hover { transform: translateY(-3px); }
+.hcta svg { width: 22px; height: 22px; }
+.hcta-phone {
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  color: var(--royal-deep);
+  box-shadow: 0 8px 20px -6px rgba(255, 213, 0, 0.55);
+}
+.hcta-phone:hover { box-shadow: 0 14px 28px -8px rgba(255, 213, 0, 0.7); }
+.hcta-wa {
+  background: var(--whatsapp);
+  box-shadow: 0 8px 20px -6px rgba(37, 211, 102, 0.55);
+}
+.hcta-wa:hover { box-shadow: 0 14px 28px -8px rgba(37, 211, 102, 0.7); background: #1ebd5b; }
+.hcta-waze {
+  background: #33CCFF;
+  box-shadow: 0 8px 20px -6px rgba(51, 204, 255, 0.55);
+}
+.hcta-waze:hover { box-shadow: 0 14px 28px -8px rgba(51, 204, 255, 0.7); background: #1FB8EC; }
+
+.hcta-tip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  background: var(--royal-deep);
+  color: var(--white);
+  padding: 5px 11px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 100;
+}
+.hcta-tip::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-bottom-color: var(--royal-deep);
+}
+.hcta:hover .hcta-tip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 
 .header-menu {
   width: 44px; height: 44px; border-radius: 12px;
@@ -613,6 +661,7 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   background: var(--ink);
   transition: transform 0.3s;
+  cursor: default;
 }
 .gallery-tile img {
   width: 100%; height: 100%; object-fit: cover;
