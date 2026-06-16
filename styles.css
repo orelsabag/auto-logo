@@ -1200,6 +1200,11 @@ a { color: inherit; text-decoration: none; }
 .reviews-cta-wrap .btn svg { transition: transform 0.3s; }
 .reviews-cta-wrap .btn:hover svg { transform: translate(-3px, -3px); }
 
+/* Mobile only — show 5 reviews + CTA */
+@media (max-width: 639px) {
+  .review-card:nth-child(n+6) { display: none; }
+}
+
 /* ============================================================
    SERVICE AREA
    ============================================================ */
