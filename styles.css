@@ -125,24 +125,32 @@ a { color: inherit; text-decoration: none; }
 
 .header-cta {
   display: none;
-  align-items: center; gap: 10px;
-  padding: 10px 18px;
-  background: var(--royal);
+  align-items: center; gap: 12px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, var(--royal) 0%, var(--royal-deep) 100%);
   color: var(--white);
   border-radius: 100px;
-  transition: all 0.25s;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 16px -4px rgba(27, 69, 168, 0.35);
 }
 @media (min-width: 768px) { .header-cta { display: inline-flex; } }
-.header-cta:hover { background: var(--royal-deep); transform: translateY(-1px); box-shadow: 0 8px 20px -6px rgba(27, 69, 168, 0.45); }
+.header-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -8px rgba(27, 69, 168, 0.55);
+}
 .header-cta-icon {
   display: grid; place-items: center;
-  width: 28px; height: 28px;
-  background: var(--gold); color: var(--royal-deep);
+  width: 38px; height: 38px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  color: var(--royal-deep);
   border-radius: 50%;
+  box-shadow: 0 4px 8px -2px rgba(255, 213, 0, 0.4), inset 0 -2px 0 rgba(0,0,0,0.08);
+  flex-shrink: 0;
 }
-.header-cta-body { display: flex; flex-direction: column; line-height: 1.15; }
-.header-cta-label { font-size: 11px; opacity: 0.85; font-weight: 500; }
-.header-cta-num { font-weight: 800; font-size: 15px; }
+.header-cta-icon svg { width: 18px; height: 18px; }
+.header-cta-body { display: flex; flex-direction: column; line-height: 1.2; gap: 1px; }
+.header-cta-label { font-size: 12px; opacity: 0.85; font-weight: 500; letter-spacing: 0.01em; }
+.header-cta-num { font-weight: 800; font-size: 17px; font-family: 'Heebo', sans-serif; }
 
 .header-menu {
   width: 44px; height: 44px; border-radius: 12px;
@@ -353,12 +361,12 @@ a { color: inherit; text-decoration: none; }
    TRIPLE CTA STRIP
    ============================================================ */
 .triple-cta {
-  display: none;
+  display: none !important;
   background: var(--royal-deep);
   padding: 32px 0;
   border-top: 1px solid rgba(255, 213, 0, 0.2);
 }
-@media (min-width: 768px) { .triple-cta { display: block; } }
+@media (min-width: 1024px) { .triple-cta { display: block !important; } }
 .triple-cta-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
