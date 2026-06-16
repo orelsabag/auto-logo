@@ -556,26 +556,269 @@ window.dataLayer = window.dataLayer || [];
   </div>
 </section>
 
-<!-- ============ REVIEWS ============ -->
+<!-- ============ REVIEWS — Google reviews wall ============ -->
 <section class="reviews" id="reviews">
+  <div class="reviews-bg" aria-hidden="true"></div>
+  <div class="reviews-decor reviews-decor-1" aria-hidden="true"></div>
+  <div class="reviews-decor reviews-decor-2" aria-hidden="true"></div>
+
   <div class="container-x">
-    <div class="reviews-inner">
-      <div class="reviews-text">
-        <span class="eyebrow eyebrow-light">ביקורות אמת</span>
-        <h2 class="section-title section-title-light">לא מבטיחים. <span class="hl-gold">הלקוחות שלנו מספרים.</span></h2>
-        <p class="section-sub section-sub-light">
-          קראו את הביקורות של מי שבדק אצלנו רכב לפני קנייה — ישירות בגוגל. כל ביקורת אמיתית, מאומתת, ובלי סינון.
-        </p>
-        <a href="https://www.google.com/maps/place/אוטו-לגו+שירותי+רכב/@32.9348023,35.3736144,899m/data=!3m2!1e3!4b1!4m6!3m5!1s0x151c31fe8c7dee4f:0x89ef1f9247e74b4f!8m2!3d32.9348023!4d35.3736144" class="btn btn-gold" data-event="reviews_click" data-loc="reviews">
-          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-          ראו את כל הביקורות בגוגל
-        </a>
+    <!-- Hero -->
+    <div class="reviews-hero">
+      <div class="google-badge">
+        <svg viewBox="0 0 24 24" class="google-g">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+        </svg>
+        <span class="google-badge-text">Reviews</span>
       </div>
-      <div class="reviews-stars">
-        <div class="big-stars" aria-hidden="true">★★★★★</div>
-        <div class="big-rating">5.0</div>
-        <div class="big-rating-sub">ביקורות מאומתות בגוגל</div>
+
+      <h2 class="section-title section-title-light">
+        לא מבטיחים. <span class="hl-gold">הלקוחות שלנו מספרים.</span>
+      </h2>
+
+      <div class="reviews-rating-row">
+        <div class="reviews-rating-big">5.0</div>
+        <div class="reviews-rating-stars">
+          <span aria-hidden="true">★★★★★</span>
+          <span class="reviews-rating-meta">מבוסס על <strong>30+</strong> ביקורות אמיתיות בגוגל</span>
+        </div>
       </div>
+    </div>
+
+    <!-- Review masonry -->
+    <div class="review-grid">
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#4285F4">ק</div>
+          <div class="review-id"><div class="review-name">קובי אליעזר</div><div class="review-date">השבוע</div></div>
+          <span class="review-google" aria-label="ביקורת מ-Google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars" aria-label="5 כוכבים">★★★★★</div>
+        <p class="review-text">אנשים אדיבים סובלניים שעושים את הבדיקה לחוויה... ממליץ בחום</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#EA4335">Z</div>
+          <div class="review-id"><div class="review-name">Zvika Millo</div><div class="review-date">לפני שבוע</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">שירות מכל הלב ומחירים הגיוניים. מרגיש יותר בטוח אצל אמג'ד יותר מאשר במוסך המרכזי.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#FBBC04;color:#0E3293">B</div>
+          <div class="review-id"><div class="review-name">Bahjat Ghanem</div><div class="review-date">לפני שבועיים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">שירות מצויין ומקצועיות</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#34A853">ל</div>
+          <div class="review-id"><div class="review-name">לידור שם טוב</div><div class="review-date">לפני 3 שבועות</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">המוסך הכי טוב בצפון</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#4285F4">T</div>
+          <div class="review-id"><div class="review-name">Tzarih RG</div><div class="review-date">לפני חודש</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">חברה מקצוענים ואמינים עשה מחיר טוב ממליץ!!!</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#EA4335">M</div>
+          <div class="review-id"><div class="review-name">Musachim-north</div><div class="review-date">לפני חודש</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">מקום מדהים מקצועיות</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#FBBC04;color:#0E3293">A</div>
+          <div class="review-id"><div class="review-name">Alen Bismuth</div><div class="review-date">לפני חודש</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">אין שירות כזה פשוט אלוף. חזרתי בשנית לטיפול ושוב שירות מקצועי ואדיב</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#34A853">ס</div>
+          <div class="review-id"><div class="review-name">ספא גאנם</div><div class="review-date">לפני חודש</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">אין מילים מקום ברמה מאוד טובה בהנהלת אנשים מדהימים ומקצוענים</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#4285F4">E</div>
+          <div class="review-id"><div class="review-name">e H</div><div class="review-date">לפני חודש</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">שירות מעולה מקצועי חברה ממש טובים סבלניים ואמינים 🙏 תודה לאמג'אד היקר על השירות</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#EA4335">W</div>
+          <div class="review-id"><div class="review-name">Wasim Ganum</div><div class="review-date">לפני חודשיים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">מוסך מושה ואיכותי ביותר מפנק ושומר על הרכבים כמו חברה שלו הכל אורגינל מספר 1 באיזור</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#FBBC04;color:#0E3293">W</div>
+          <div class="review-id"><div class="review-name">Waseem Hamoud</div><div class="review-date">לפני חודשיים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">מספר 1 בצפון</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#34A853">Q</div>
+          <div class="review-id"><div class="review-name">Qwedir Jaber</div><div class="review-date">לפני 3 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">שרות אמין ומקצועי</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#4285F4">ר</div>
+          <div class="review-id"><div class="review-name">רביע סתאוי</div><div class="review-date">לפני 3 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">טוף המוסכים</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#EA4335">M</div>
+          <div class="review-id"><div class="review-name">madi shedem</div><div class="review-date">לפני 3 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">שירות אדיב מקצועי מעולה וזול. ממליץ בחום</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#FBBC04;color:#0E3293">א</div>
+          <div class="review-id"><div class="review-name">אדם נג'ם</div><div class="review-date">לפני 4 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">אוטו-לגו מסודרים מאוד, אנשים מכובדים מקצועניים, באמת יש להם שירות מהממת.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#34A853">מ</div>
+          <div class="review-id"><div class="review-name">מאיה פרץ</div><div class="review-date">לפני 4 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">שירות אמין! מספר 1. ממליצה בחום!</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#4285F4">Y</div>
+          <div class="review-id"><div class="review-name">yarin_wainer</div><div class="review-date">לפני 4 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">אחלה אמג'ד מקצועי ונוח בכיס</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#EA4335">D</div>
+          <div class="review-id"><div class="review-name">deaa harb</div><div class="review-date">לפני 4 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">מקצועיות ואמינות. מחיר והוגנות. זמן טיפול מהיר. שירות לקוחות הכי טובה. ניקיון וסדר. מצוין – אמין, מהיר, מחיר הכי זול בארץ</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#FBBC04;color:#0E3293">פ</div>
+          <div class="review-id"><div class="review-name">פיודור סובולב</div><div class="review-date">לפני 4 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">תודה רבה על השירות הנדיב, מקום טוב, אנשים טובים!</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#34A853">מ</div>
+          <div class="review-id"><div class="review-name">מגן הדברת מזיקים</div><div class="review-date">לפני 4 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">שירות מעולה עם הסבר ברור. יחס טוב. מאוד מרוצה</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#4285F4">ע</div>
+          <div class="review-id"><div class="review-name">עפו עאמר</div><div class="review-date">לפני 4 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">שירות אדיב מקצועי ומהיר. פתר לי בעיה שהרבה מוסכים לא הצליחו לפתור. פשוט חוויה מדהימה</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#EA4335">E</div>
+          <div class="review-id"><div class="review-name">E.z.f D.</div><div class="review-date">לפני 5 חודשים</div></div>
+          <span class="review-google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09 0-.73.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">שירות מקצועי ויחס אישי...</p>
+      </article>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="reviews-cta-wrap">
+      <a href="https://www.google.com/maps/place/אוטו-לגו+שירותי+רכב/@32.9348023,35.3736144,899m/data=!3m2!1e3!4b1!4m6!3m5!1s0x151c31fe8c7dee4f:0x89ef1f9247e74b4f!8m2!3d32.9348023!4d35.3736144" target="_blank" rel="noopener" class="btn btn-gold btn-xl" data-event="reviews_click" data-loc="reviews">
+        ראו את כל הביקורות בגוגל
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9-9M8 8h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </div>
 </section>

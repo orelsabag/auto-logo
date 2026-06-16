@@ -988,51 +988,217 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
-   REVIEWS
+   REVIEWS — Google Reviews wall with masonry
    ============================================================ */
 .reviews {
-  padding: 80px 0;
-  background: var(--royal-deep);
-  color: var(--white);
   position: relative;
+  padding: 100px 0 110px;
+  background:
+    linear-gradient(180deg, #F8FAFB 0%, #EEF2F7 100%);
+  color: var(--ink);
   overflow: hidden;
 }
-.reviews::before {
-  content: ''; position: absolute;
-  top: -100px; left: -100px;
-  width: 300px; height: 300px;
+.reviews-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(14, 50, 147, 0.06) 1px, transparent 0);
+  background-size: 32px 32px;
+  opacity: 0.6;
+  mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+  pointer-events: none;
+}
+.reviews-decor {
+  position: absolute;
+  pointer-events: none;
   border-radius: 50%;
-  background: rgba(255, 213, 0, 0.1);
   filter: blur(80px);
 }
-.reviews-inner {
-  display: grid; grid-template-columns: 1fr; gap: 40px;
-  align-items: center;
+.reviews-decor-1 {
+  top: -80px; right: -100px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(66, 133, 244, 0.18), transparent 70%);
+}
+.reviews-decor-2 {
+  bottom: -100px; left: -120px;
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(255, 213, 0, 0.16), transparent 70%);
+}
+
+/* Hero */
+.reviews-hero {
   position: relative;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 56px;
+  z-index: 2;
 }
-@media (min-width: 768px) { .reviews-inner { grid-template-columns: 1.4fr 1fr; } }
-.reviews-stars { text-align: center; }
-.big-stars {
-  font-size: clamp(40px, 8vw, 72px);
-  color: var(--gold);
-  letter-spacing: 0.1em;
-  line-height: 1;
-  text-shadow: 0 4px 24px rgba(255, 213, 0, 0.5);
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid rgba(14, 50, 147, 0.08);
+  padding: 8px 18px 8px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px -4px rgba(14, 50, 147, 0.15);
 }
-.big-rating {
+.google-g {
+  width: 24px; height: 24px;
+  flex-shrink: 0;
+}
+.google-badge-text {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #5F6368;
+  letter-spacing: 0.01em;
+}
+.reviews .section-title { color: var(--ink); margin-bottom: 28px; }
+.reviews .section-title-light { color: var(--ink); }
+.reviews .hl-gold { color: var(--royal); }
+
+.reviews-rating-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--white);
+  border: 1px solid rgba(14, 50, 147, 0.08);
+  border-radius: 18px;
+  padding: 16px 26px;
+  box-shadow: 0 8px 24px -8px rgba(14, 50, 147, 0.15);
+}
+.reviews-rating-big {
   font-family: 'Heebo', sans-serif;
   font-weight: 900;
-  font-size: clamp(56px, 10vw, 96px);
-  color: var(--white);
+  font-size: 48px;
   line-height: 1;
-  margin-top: 8px;
+  background: linear-gradient(135deg, #FBBC04 0%, #F09F00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
 }
-.big-rating-sub {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 8px;
-  letter-spacing: 0.04em;
+.reviews-rating-stars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
+.reviews-rating-stars > span:first-child {
+  font-size: 22px;
+  color: #FBBC04;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+.reviews-rating-meta {
+  font-size: 13px;
+  color: #5F6368;
+}
+.reviews-rating-meta strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+/* Masonry-style review grid */
+.review-grid {
+  position: relative;
+  z-index: 2;
+  column-count: 1;
+  column-gap: 18px;
+  margin-bottom: 48px;
+}
+@media (min-width: 640px) { .review-grid { column-count: 2; } }
+@media (min-width: 1024px) { .review-grid { column-count: 3; } }
+@media (min-width: 1280px) { .review-grid { column-count: 4; } }
+
+.review-card {
+  break-inside: avoid;
+  display: inline-block;
+  width: 100%;
+  background: var(--white);
+  border: 1px solid rgba(14, 50, 147, 0.08);
+  border-radius: 16px;
+  padding: 18px 18px 20px;
+  margin-bottom: 18px;
+  box-shadow:
+    0 1px 3px rgba(14, 50, 147, 0.04),
+    0 4px 12px -4px rgba(14, 50, 147, 0.06);
+  transition: all 0.3s cubic-bezier(.2, .85, .25, 1);
+}
+.review-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 213, 0, 0.5);
+  box-shadow:
+    0 1px 3px rgba(14, 50, 147, 0.06),
+    0 16px 32px -8px rgba(14, 50, 147, 0.18);
+}
+
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.review-avatar {
+  flex-shrink: 0;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--white);
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.2);
+}
+.review-id {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.25;
+}
+.review-name {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.review-date {
+  font-size: 12px;
+  color: #5F6368;
+  margin-top: 2px;
+}
+.review-google {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  opacity: 0.85;
+}
+.review-google svg { width: 100%; height: 100%; display: block; }
+
+.review-stars {
+  font-size: 16px;
+  color: #FBBC04;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.review-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #3C4043;
+}
+
+.reviews-cta-wrap {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.reviews-cta-wrap .btn svg { transition: transform 0.3s; }
+.reviews-cta-wrap .btn:hover svg { transform: translate(-3px, -3px); }
 
 /* ============================================================
    SERVICE AREA
