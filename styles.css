@@ -1694,7 +1694,7 @@ a { color: inherit; text-decoration: none; }
 }
 @media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.4fr repeat(3, 1fr); } }
-.footer-logo { width: 180px; margin-bottom: 18px; }
+.footer-logo { width: 260px; max-width: 100%; margin-bottom: 20px; }
 .footer-tagline { font-size: 14px; line-height: 1.6; color: rgba(255, 255, 255, 0.75); }
 
 .footer-social {
