@@ -830,46 +830,38 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 4px 12px -4px rgba(255, 213, 0, 0.5);
 }
 
-/* Featured/final card (item 12) — spans full row, gold background */
+/* Featured/final card (item 12) — same cell size, gold theme */
 .check-card-final {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  background:
-    linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
   border: 1px solid var(--gold);
-  padding: 32px 32px;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.3) inset,
     0 -2px 0 rgba(0, 0, 0, 0.1) inset,
-    0 18px 40px -12px rgba(255, 213, 0, 0.4);
-  flex-wrap: wrap;
+    0 18px 40px -12px rgba(255, 213, 0, 0.45);
 }
-.check-card-final::before { background: linear-gradient(90deg, transparent, var(--royal-deep), transparent); opacity: 1; }
+.check-card-final::before {
+  background: linear-gradient(90deg, transparent, var(--royal-deep), transparent);
+  opacity: 1;
+}
 .check-card-final::after { display: none; }
 .check-card-final:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   background: linear-gradient(135deg, var(--gold-soft) 0%, var(--gold) 100%);
   border-color: var(--gold-soft);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.4) inset,
-    0 26px 56px -12px rgba(255, 213, 0, 0.55);
+    0 26px 56px -12px rgba(255, 213, 0, 0.6);
 }
 .check-card-final .check-num {
-  position: static;
   color: var(--gold);
   background: var(--royal-deep);
   border-color: var(--royal-deep);
-  font-size: 16px;
-  padding: 8px 14px;
-  border-radius: 10px;
+}
+.check-card-final:hover .check-num {
+  background: var(--ink);
+  border-color: var(--ink);
 }
 .check-card-final .check-icon {
-  position: relative;
-  margin-bottom: 0;
-  flex-shrink: 0;
-  width: 72px; height: 72px;
   background: var(--royal-deep);
   border-color: var(--royal-deep);
   color: var(--gold);
@@ -877,29 +869,18 @@ a { color: inherit; text-decoration: none; }
     0 8px 16px -4px rgba(14, 50, 147, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
-.check-card-final .check-icon svg { width: 36px; height: 36px; }
 .check-card-final:hover .check-icon {
-  transform: scale(1.05) rotate(-3deg);
   background: var(--ink);
   border-color: var(--ink);
+  transform: scale(1.08) rotate(-4deg);
 }
-.check-card-final-body { flex: 1; min-width: 200px; }
 .check-card-final .check-title {
   color: var(--royal-deep);
-  font-size: 22px;
-  margin-bottom: 4px;
 }
 .check-card-final .check-text {
   color: rgba(14, 50, 147, 0.85);
-  font-size: 15.5px;
-  line-height: 1.5;
 }
 .check-card-final .check-text strong { color: var(--royal-deep); }
-
-@media (max-width: 640px) {
-  .check-card-final { flex-direction: column; text-align: center; align-items: center; }
-  .check-card-final .check-num { margin-bottom: 4px; }
-}
 
 /* ============================================================
    PRICING
