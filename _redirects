@@ -1,0 +1,6 @@
+# Force www → apex (autolego.co.il is canonical)
+https://www.autolego.co.il/* https://autolego.co.il/:splat 301!
+http://www.autolego.co.il/* https://autolego.co.il/:splat 301!
+
+# Force HTTP → HTTPS on apex (Cloudflare normally handles this but doubles up)
+http://autolego.co.il/* https://autolego.co.il/:splat 301!
