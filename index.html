@@ -52,20 +52,28 @@ tailwind.config = {
 </script>
 <link rel="stylesheet" href="styles.css?v=20260616-1">
 
-<!-- ============ TRACKING (production only) ============ -->
+<!-- ============ TRACKING — GTM + GA4 (production domains only) ============ -->
 <script>
 (function(){
   var host = location.hostname;
-  var isProd = host.endsWith('auto-logo.co.il') || host.endsWith('autologo.co.il');
+  var isProd = (
+    host === 'autolego.co.il' ||
+    host === 'www.autolego.co.il' ||
+    host === 'auto-logo.pages.dev' ||
+    host.endsWith('.auto-logo.pages.dev')
+  );
+  window.dataLayer = window.dataLayer || [];
   if (!isProd) return;
-  // GTM placeholder — replace with real container when client provides
-  // (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');
+  // Google Tag Manager
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WHZRHF6C');
 })();
-window.dataLayer = window.dataLayer || [];
 </script>
 </head>
 
 <body class="font-body antialiased selection:bg-gold selection:text-ink overflow-x-hidden">
+
+<!-- GTM noscript (production only — script tag above handles gating) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHZRHF6C" height="0" width="0" style="display:none;visibility:hidden" title="GTM"></iframe></noscript>
 
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:right-3 focus:z-[100] focus:px-4 focus:py-2 focus:bg-royal focus:text-white focus:rounded">דלג לתוכן</a>
 

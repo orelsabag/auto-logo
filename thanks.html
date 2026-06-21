@@ -37,14 +37,27 @@ tailwind.config = {
 </script>
 <link rel="stylesheet" href="styles.css?v=20260616-2">
 
-<!-- Tracking -->
+<!-- Tracking — GTM + GA4 (production domains only) -->
 <script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  event: 'lead_thank_you',
-  page: 'thanks',
-  conversion: true
-});
+(function(){
+  var host = location.hostname;
+  var isProd = (
+    host === 'autolego.co.il' ||
+    host === 'www.autolego.co.il' ||
+    host === 'auto-logo.pages.dev' ||
+    host.endsWith('.auto-logo.pages.dev')
+  );
+  window.dataLayer = window.dataLayer || [];
+  // Always push the conversion event so it's available in dataLayer
+  window.dataLayer.push({
+    event: 'lead_thank_you',
+    page: 'thanks',
+    conversion: true
+  });
+  if (!isProd) return;
+  // Google Tag Manager
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WHZRHF6C');
+})();
 </script>
 
 <style>
@@ -248,6 +261,8 @@ window.dataLayer.push({
 </head>
 
 <body class="font-body antialiased overflow-x-hidden">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHZRHF6C" height="0" width="0" style="display:none;visibility:hidden" title="GTM"></iframe></noscript>
 
 <div class="ty-bg-pattern" aria-hidden="true"></div>
 <div class="ty-decor ty-decor-1" aria-hidden="true"></div>
